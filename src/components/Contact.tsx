@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle, MessageSquare, Clock, Globe, Zap, DollarSign } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, MessageSquare, Clock, Globe, Zap } from 'lucide-react';
 
 function LinkedinIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
@@ -19,8 +19,9 @@ export function Contact() {
     name: '',
     email: '',
     company: '',
-    projectType: 'Mobile App',
+    projectType: 'New Mobile App',
     budget: '$3,000 – $10,000',
+    timeline: '1–2 Months',
     description: ''
   });
 
@@ -28,12 +29,12 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false);
 
   const projectTypes = [
-    'Mobile App',
-    'Web Application',
-    'E-Commerce',
-    'Backend / API',
-    'Real-Time Application',
-    'AI Integration',
+    'New Mobile App',
+    'Existing App Improvement',
+    'MVP Development',
+    'Backend/API',
+    'Web Platform',
+    'Smart TV App',
     'Maintenance',
     'Other'
   ];
@@ -45,6 +46,13 @@ export function Contact() {
     AED: ['Under AED 5K', 'AED 5K – 15K', 'AED 15K – 40K', 'AED 40K+', 'Not decided'],
     INR: ['Under ₹50K', '₹50K – ₹1L', '₹1L – ₹3L', '₹3L+', 'Not decided']
   };
+
+  const timelineOptions = [
+    'Immediate (< 2 Weeks)',
+    '1–2 Months',
+    '2–3 Months',
+    'Flexible'
+  ];
 
   const validate = () => {
     const errs: Record<string, string> = {};
@@ -70,34 +78,34 @@ export function Contact() {
     <section id="contact" className="py-24 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top CTA Banner */}
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-4">
             <Globe className="w-3.5 h-3.5" />
-            WORLDWIDE CLIENT INQUIRIES
+            START A CONVERSATION
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-            Have a Product Idea? Let's Build It.
+            Let's Discuss Your Project
           </h2>
           <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-            Tell me what you're building, what problem you're trying to solve, and where you are in the process. Working with founders & teams across all global timezones.
+            Whether you are starting a new product, improving an existing app, or looking for additional development capacity.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* Left Column: Direct Contact Info & Verification Rules */}
+          {/* Left Column: Direct Contact Info & Verified Links */}
           <div className="lg:col-span-5 space-y-8">
             <div className="p-8 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
               <div className="text-xs font-mono font-semibold text-blue-400 uppercase tracking-wider mb-6 flex items-center justify-between">
-                <span>DIRECT GLOBAL CONTACT</span>
+                <span>DIRECT CHANNELS</span>
                 <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">
                   ⚡ 12H Response
                 </span>
               </div>
 
               <div className="space-y-6">
-                {/* WhatsApp Quick Chat */}
+                {/* Instant WhatsApp Chat */}
                 <a
                   href="https://wa.me/918349513774"
                   target="_blank"
@@ -136,7 +144,7 @@ export function Contact() {
 
                 {/* LinkedIn */}
                 <a
-                  href="https://linkedin.com/in/paritoshshrouty"
+                  href="https://linkedin.com/in/paritosh-shrouty-897198199/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-800/80 transition-colors group"
@@ -147,23 +155,7 @@ export function Contact() {
                   <div>
                     <span className="text-[11px] font-semibold text-slate-400 block">LinkedIn Profile</span>
                     <span className="text-sm font-bold text-slate-100 group-hover:text-blue-400 transition-colors">
-                      linkedin.com/in/paritoshshrouty
-                    </span>
-                  </div>
-                </a>
-
-                {/* Phone */}
-                <a
-                  href="tel:+918349513774"
-                  className="flex items-start gap-4 p-3 rounded-xl hover:bg-slate-800/80 transition-colors group"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-[11px] font-semibold text-slate-400 block">Direct Phone</span>
-                    <span className="text-sm font-bold text-slate-100 group-hover:text-emerald-400 transition-colors">
-                      +91-8349513774
+                      linkedin.com/in/paritosh-shrouty-897198199/
                     </span>
                   </div>
                 </a>
@@ -182,14 +174,14 @@ export function Contact() {
                 </div>
               </div>
 
-              {/* Verified Feedback Placeholder Notice */}
+              {/* Verified Client Feedback Policy (Prompt Section 27) */}
               <div className="mt-8 pt-6 border-t border-slate-800">
                 <div className="flex items-center gap-2 text-xs font-bold text-slate-400 mb-1">
                   <Clock className="w-4 h-4 text-blue-400" />
-                  Client Reviews Policy
+                  Authentic Client Feedback Policy
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed italic">
-                  "Client feedback coming soon." — Standard studio policy ensuring 100% verified, authentic client reviews only.
+                  "Client feedback coming soon." — Policy ensuring 100% verified client reviews without fabricated metrics.
                 </p>
               </div>
             </div>
@@ -204,10 +196,10 @@ export function Contact() {
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                    Project Inquiry Submitted!
+                    Project Inquiry Received!
                   </h3>
                   <p className="text-sm text-slate-600 dark:text-slate-300 max-w-md mx-auto leading-relaxed">
-                    Thank you for reaching out. I'll review your project details and get back to you at <strong>{formData.email}</strong> within 12 hours.
+                    Thank you for reaching out. I will review your project details and respond to <strong>{formData.email}</strong> within 12 hours.
                   </p>
                   <button
                     onClick={() => {
@@ -216,8 +208,9 @@ export function Contact() {
                         name: '',
                         email: '',
                         company: '',
-                        projectType: 'Mobile App',
+                        projectType: 'New Mobile App',
                         budget: '$3,000 – $10,000',
+                        timeline: '1–2 Months',
                         description: ''
                       });
                     }}
@@ -296,7 +289,7 @@ export function Contact() {
                       type="text"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      placeholder="e.g. Apex Global SaaS"
+                      placeholder="e.g. Acme Tech Solutions"
                       className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-xs font-medium focus:ring-2 focus:ring-blue-500 outline-none"
                     />
                   </div>
@@ -347,6 +340,29 @@ export function Contact() {
                     </div>
                   </div>
 
+                  {/* Timeline Selector */}
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-2">
+                      Target Timeline
+                    </label>
+                    <div className="flex flex-wrap gap-2">
+                      {timelineOptions.map((tl) => (
+                        <button
+                          key={tl}
+                          type="button"
+                          onClick={() => setFormData({ ...formData, timeline: tl })}
+                          className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                            formData.timeline === tl
+                              ? 'bg-indigo-600 text-white'
+                              : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
+                          }`}
+                        >
+                          {tl}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
                   {/* Project Description */}
                   <div>
                     <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">
@@ -356,7 +372,7 @@ export function Contact() {
                       rows={4}
                       value={formData.description}
                       onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                      placeholder="Briefly describe what you're looking to build, desired timeline, or current state..."
+                      placeholder="Describe what you're looking to build, desired features, or technical goals..."
                       className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-xs font-medium focus:ring-2 focus:ring-blue-500 outline-none resize-none"
                     />
                     {errors.description && <p className="text-[11px] text-rose-500 mt-1">{errors.description}</p>}
@@ -367,7 +383,7 @@ export function Contact() {
                     type="submit"
                     className="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-600/25 transition-all flex items-center justify-center gap-2"
                   >
-                    Send Global Project Inquiry
+                    Start a Project
                     <Send className="w-4 h-4" />
                   </button>
                 </form>

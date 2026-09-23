@@ -1,16 +1,18 @@
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { Credibility } from '@/components/Credibility';
-import { Work } from '@/components/Work';
-import { IndependentProjects } from '@/components/IndependentProjects';
-import { UiPrototypes } from '@/components/UiPrototypes';
-import { EngagementModels } from '@/components/EngagementModels';
+import { WhatIBuild } from '@/components/WhatIBuild';
 import { Services } from '@/components/Services';
-import { GlobalReach } from '@/components/GlobalReach';
-import { About } from '@/components/About';
+import { Work } from '@/components/Work';
 import { Skills } from '@/components/Skills';
-import { Process } from '@/components/Process';
 import { WhyMe } from '@/components/WhyMe';
+import { Process } from '@/components/Process';
+import { WhoIWorkWith } from '@/components/WhoIWorkWith';
+import { AgencyPartnership } from '@/components/AgencyPartnership';
+import { GlobalReach } from '@/components/GlobalReach';
+import { EngagementModels } from '@/components/EngagementModels';
+import { About } from '@/components/About';
+import { FinalCta } from '@/components/FinalCta';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 
@@ -20,16 +22,18 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Credibility />
-      <Work />
-      <IndependentProjects />
-      <UiPrototypes />
-      <EngagementModels />
+      <WhatIBuild />
       <Services />
-      <GlobalReach />
-      <About />
+      <Work />
       <Skills />
-      <Process />
       <WhyMe />
+      <Process />
+      <WhoIWorkWith />
+      <AgencyPartnership />
+      <GlobalReach />
+      <EngagementModels />
+      <About />
+      <FinalCta />
       <Contact />
       <Footer />
     </main>

@@ -9,61 +9,91 @@ export const PROCESS_STEPS: ProcessStep[] = [
   {
     step: '01',
     title: 'Discovery',
-    description: 'Understand the core business problem, target end-users, feature requirements, and technical scope.',
+    description: 'Understand the business goal, target users, project requirements, and technical constraints.',
     details: [
-      'Define clear business objectives & user journeys',
+      'Clarify business goals & user journeys',
       'Identify target platforms (Android, iOS, Web, Smart TV)',
-      'Analyze third-party integrations and backend needs'
+      'Analyze third-party API dependencies & system scope'
     ]
   },
   {
     step: '02',
     title: 'Planning',
-    description: 'Define technical architecture, state management patterns, API contracts, and database schema.',
+    description: 'Define feature scope, product architecture roadmap, technology stack, and sprint milestones.',
     details: [
-      'Choose state management (BLoC, Provider, Supabase, DRF)',
-      'Structure offline caching strategy & real-time sync needs',
-      'Draft responsive UI layouts & component component specifications'
+      'Draft technical specification document',
+      'Choose state management strategy (BLoC / Provider)',
+      'Establish API endpoints & database schema models'
     ]
   },
   {
     step: '03',
-    title: 'Design & Development',
-    description: 'Build pixel-perfect Flutter UIs, Vue.js modules, backend APIs, and database structures in disciplined sprints.',
+    title: 'UI & Architecture',
+    description: 'Structure responsive UI screen layouts, design tokens, and modular codebase architecture.',
     details: [
-      'Construct modular, reusable component libraries',
-      'Integrate Django REST Framework APIs or Supabase DBs',
-      'Implement BLoC patterns, WebSockets, or Maps services'
+      'Construct reusable custom widget library',
+      'Set up clean MVVM folder architecture',
+      'Prepare light/dark theme tokens & layout constraints'
     ]
   },
   {
     step: '04',
-    title: 'Testing',
-    description: 'Validate application workflows, user interface responsiveness, API payload data, and performance.',
+    title: 'Development',
+    description: 'Build core application features, state handlers, and interactive user flows in disciplined sprints.',
     details: [
-      'Execute Dart DevTools performance & memory profiling',
-      'Test edge cases, offline modes, and slow connections',
-      'Verify role-based permissions and secure authentication'
+      'Write production-ready Flutter or Vue.js components',
+      'Implement BLoC state streams & business logic',
+      'Configure local storage / SQLite offline caching'
     ]
   },
   {
     step: '05',
-    title: 'Deployment',
-    description: 'Prepare production builds and configure release pipelines for web servers, Google Play, and Apple App Store.',
+    title: 'API Integration',
+    description: 'Connect client interfaces with backend REST APIs, authentication services, and third-party gateways.',
     details: [
-      'Generate signed release binaries (APK/AAB/IPA)',
-      'Deploy Vue.js / web builds to cloud environments',
-      'Verify production API endpoints & row-level security'
+      'Integrate Django REST Framework APIs or Supabase',
+      'Implement JWT / OAuth session authentication',
+      'Set up payment gateways (Razorpay/Stripe) & WebSockets'
     ]
   },
   {
     step: '06',
-    title: 'Support',
-    description: 'Provide ongoing post-launch maintenance, API updates, performance optimization, and new feature iterations.',
+    title: 'Testing',
+    description: 'Validate application workflows, screen responsiveness, error handling, and performance profiling.',
     details: [
-      'Monitor app stability & operational logging',
-      'Perform version upgrades & security patches',
-      'Iterate on user feedback for future feature rollouts'
+      'Execute Dart DevTools memory & FPS profiling',
+      'Test edge cases, offline modes & network resilience',
+      'Verify role-based access & data security rules'
+    ]
+  },
+  {
+    step: '07',
+    title: 'Client Review',
+    description: 'Demonstrate functional application builds to stakeholders for feedback, refinement, and final sign-off.',
+    details: [
+      'Provide staging app build (APK / TestFlight / Web URL)',
+      'Conduct video sprint demo & feature walkthrough',
+      'Incorporate client feedback & polish interactions'
+    ]
+  },
+  {
+    step: '08',
+    title: 'Deployment',
+    description: 'Configure production build pipelines and release binaries to Google Play, Apple App Store, or web servers.',
+    details: [
+      'Generate signed release binaries (AAB/IPA/Web bundle)',
+      'Manage app store submission metadata & compliance',
+      'Verify production API endpoints & CORS security'
+    ]
+  },
+  {
+    step: '09',
+    title: 'Support',
+    description: 'Provide post-launch maintenance, bug fixes, third-party API updates, and ongoing feature enhancements.',
+    details: [
+      'Monitor production stability & app logging',
+      'Perform annual OS SDK version updates',
+      'Iterate on new feature requests & scalability needs'
     ]
   }
 ];

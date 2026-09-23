@@ -2,14 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '@/context/ThemeContext';
-import { Sun, Moon, Menu, X, Download, Code2 } from 'lucide-react';
+import { Sun, Moon, Menu, X, ArrowUpRight, Code2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface NavbarProps {
-  onOpenResume?: () => void;
-}
-
-export function Navbar({ onOpenResume }: NavbarProps) {
+export function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,12 +20,10 @@ export function Navbar({ onOpenResume }: NavbarProps) {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
+    { name: 'Services', href: '#services' },
+    { name: 'Work', href: '#projects' },
+    { name: 'Case Studies', href: '#case-studies' },
     { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Architecture', href: '#architecture' },
-    { name: 'What I Work With', href: '#interview-prep' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -53,18 +47,18 @@ export function Navbar({ onOpenResume }: NavbarProps) {
                 Paritosh Shrouty
               </span>
               <span className="text-xs text-slate-400 block font-medium">
-                Flutter Developer • Software Engineer
+                Flutter & Full-Stack Product Developer
               </span>
             </div>
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-1 bg-slate-800/70 p-1.5 rounded-full border border-slate-700/70 backdrop-blur-sm">
+          <nav className="hidden md:flex items-center gap-1 bg-slate-800/70 p-1.5 rounded-full border border-slate-700/80 backdrop-blur-sm">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-700/80 rounded-full transition-all"
+                className="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white rounded-full transition-all hover:bg-slate-700/80"
               >
                 {link.name}
               </a>
@@ -72,35 +66,27 @@ export function Navbar({ onOpenResume }: NavbarProps) {
           </nav>
 
           {/* Right Actions */}
-          <div className="hidden md:flex items-center gap-2.5">
+          <div className="hidden md:flex items-center gap-3">
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-300 hover:text-white transition-all"
+              className="p-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:text-blue-400 transition-all"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
 
-            {/* Secondary Contact Button */}
+            {/* Primary CTA */}
             <a
               href="#contact"
-              className="hidden xl:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-800 text-slate-200 text-xs font-semibold transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-600/20 transition-all hover:scale-105 active:scale-95"
             >
-              Contact Me
+              Start a Project
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
-
-            {/* Primary CTA — Download Resume */}
-            <button
-              onClick={onOpenResume}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-600/20 transition-all active:scale-95"
-            >
-              <Download className="w-3.5 h-3.5" />
-              <span>Download Resume</span>
-            </button>
           </div>
 
-          {/* Mobile Menu Actions */}
+          {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={toggleTheme}
@@ -113,7 +99,6 @@ export function Navbar({ onOpenResume }: NavbarProps) {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-300"
-              aria-label="Open Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -141,23 +126,14 @@ export function Navbar({ onOpenResume }: NavbarProps) {
                   {link.name}
                 </a>
               ))}
-              <div className="pt-3 border-t border-slate-800 mt-2 flex flex-col gap-2">
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    onOpenResume?.();
-                  }}
-                  className="w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm"
-                >
-                  <Download className="w-4 h-4" />
-                  Download Resume
-                </button>
+              <div className="pt-3 border-t border-slate-800 mt-2">
                 <a
                   href="#contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-sm"
+                  className="w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm"
                 >
-                  Contact Me
+                  Start a Project
+                  <ArrowUpRight className="w-4 h-4" />
                 </a>
               </div>
             </div>

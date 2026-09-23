@@ -5,61 +5,62 @@ export interface SkillGroup {
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    category: 'Mobile Development',
+    category: 'MOBILE',
     skills: [
-      { name: 'Flutter', tag: 'Core Specialist' },
+      { name: 'Flutter', tag: 'Specialist' },
       { name: 'Dart', tag: 'Expert' },
-      { name: 'BLoC State Management', tag: 'Production' },
-      { name: 'FlutterFlow', tag: 'AI Prototyping' },
-      { name: 'Android SDK', tag: 'Native Integration' }
+      { name: 'Android', tag: 'Native SDK' },
+      { name: 'iOS', tag: 'Deployment' },
+      { name: 'Smart TV', tag: 'D-Pad Remote UX' }
     ]
   },
   {
-    category: 'Web & Frontend',
+    category: 'ARCHITECTURE',
     skills: [
-      { name: 'Vue.js', tag: 'Production' },
-      { name: 'JavaScript (ES6+)', tag: 'Core' },
-      { name: 'HTML5 & CSS3', tag: 'Semantic Layout' },
-      { name: 'Responsive UI Design', tag: 'Cross-device' }
+      { name: 'BLoC', tag: 'Production State' },
+      { name: 'Provider', tag: 'State' },
+      { name: 'Riverpod', tag: 'State' },
+      { name: 'MVVM', tag: 'Clean Code' }
     ]
   },
   {
-    category: 'Backend & APIs',
+    category: 'BACKEND',
     skills: [
-      { name: 'Django', tag: 'Production' },
-      { name: 'Django REST Framework (DRF)', tag: 'APIs' },
       { name: 'Python', tag: 'Core' },
-      { name: 'RESTful API Architecture', tag: 'Design' }
+      { name: 'Django', tag: 'Web Framework' },
+      { name: 'Django REST Framework', tag: 'DRF APIs' },
+      { name: 'REST APIs', tag: 'Endpoint Design' }
     ]
   },
   {
-    category: 'Database & Backend Services',
+    category: 'DATABASE',
     skills: [
-      { name: 'Supabase', tag: 'Real-time DB / Auth' },
-      { name: 'Firebase', tag: 'Auth / Firestore' },
       { name: 'PostgreSQL', tag: 'Relational DB' },
+      { name: 'MySQL', tag: 'Relational DB' },
       { name: 'SQLite', tag: 'Offline Caching' },
-      { name: 'SQL', tag: 'Queries & Schemas' }
+      { name: 'Hive', tag: 'Local KV Store' },
+      { name: 'Supabase', tag: 'Real-time DB' }
     ]
   },
   {
-    category: 'Architecture & Engineering Concepts',
+    category: 'CLOUD / SERVICES',
     skills: [
-      { name: 'Cross-platform Architecture', tag: 'Android / iOS / TV / Web' },
-      { name: 'MVVM Pattern', tag: 'Clean Code' },
-      { name: 'Offline-First Design', tag: 'Background Sync' },
-      { name: 'Real-Time Systems', tag: 'WebSockets / Maps' },
-      { name: 'Agile / Scrum', tag: 'Sprint Execution' },
-      { name: 'CI / CD Pipelines', tag: 'Deployment' }
+      { name: 'Firebase', tag: 'Auth / Firestore' },
+      { name: 'Supabase', tag: 'Auth / RLS' },
+      { name: 'Authentication', tag: 'JWT & OAuth' },
+      { name: 'Notifications', tag: 'FCM / Push' }
     ]
   },
   {
-    category: 'Development Tools',
+    category: 'OTHER',
     skills: [
-      { name: 'Git & GitHub', tag: 'Version Control' },
-      { name: 'Android Studio', tag: 'IDE & Emulators' },
-      { name: 'Postman', tag: 'API Testing' },
-      { name: 'Dart DevTools', tag: 'Profiling & Tuning' }
+      { name: 'Google Maps', tag: 'Maps SDK' },
+      { name: 'OpenStreetMap', tag: 'Location' },
+      { name: 'Geolocation', tag: 'GPS Tracking' },
+      { name: 'WebSockets', tag: 'Real-time Data' },
+      { name: 'Payments', tag: 'Razorpay / Stripe' },
+      { name: 'Git', tag: 'Version Control' },
+      { name: 'Docker', tag: 'Containers' }
     ]
   }
 ];
